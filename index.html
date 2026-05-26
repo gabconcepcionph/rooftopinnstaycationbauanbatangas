@@ -97,7 +97,7 @@
   </div>
 
   <!-- Navigation -->
-  <header class="fixed top-8 w-full z-40 bg-white/90 backdrop-blur-sm border-b border-[var(--color-muted)]/20 shadow-sm">
+  <header id="main-nav" class="fixed top-8 w-full z-40 bg-white/90 backdrop-blur-sm border-b border-[var(--color-muted)]/20 shadow-sm transition-all duration-300">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="font-heading text-xl font-bold text-[var(--color-primary)]">
         Rooftop Inn
@@ -387,9 +387,10 @@
 
   <!-- JavaScript -->
   <script>
-    // Close preview banner
+    // Close preview banner and adjust nav position
     document.getElementById('close-banner').addEventListener('click', function() {
       document.getElementById('preview-banner').style.display = 'none';
+      document.getElementById('main-nav').style.top = '0';
     });
 
     // Smooth scroll for anchor links
